@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> @Jorge Landaeta </title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Animate On Scroll CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!--
+        * Navigation
+    -->
+    <nav>
+        <div>
+            <h1> J<span class="text-focus">L</span> </h1>
+        </div>
+
+        <ul class="nav-ul">
+            <li> <a href="#info-anchor" class="nav-link" data-text="Sobre mí"> Sobre mí </a> </li>
+            <li> <a href="#education-anchor" class="nav-link" data-text="Formación"> Formación </a> </li>
+            <li> <a href="#skills-anchor" class="nav-link" data-text="Conocimientos"> Conocimientos </a> </li>
+            <li> <a href="#works-anchor" class="nav-link" data-text="Trabajos Destacados"> Trabajos Destacados </a> </li>
+        </ul>
+
+        <ul>
+            <li> 
+                <a href="#contact" class="button button-bordered" data-text="Contacto"> Contacto </a> 
+            </li>
+        </ul>
+    </nav>
+
+    <!--
+        * Header
+    -->
+    <header>
+        <div class="header-info">
+            <div class="header-text">
+                <h3> ¡Hola! soy </h3>
+                <h1 class="name"> Jorge <span class="text-focus">Landaeta</span> </h1>
+                <h3 id="typing" data-text="<Desarrollador web>"> </h3>
+            </div>
+
+            <div class="social-buttons">
+                <a href="#" class="social-button social-button--facebook" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-button social-button--linkedin" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                
+                <a href="https://github.com/LZJorge" class="social-button social-button--github" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+
+                <a href="#" class="social-button social-button--instagram" aria-label="CodePen">
+                  <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="header-buttons">
+                <a href="#info-anchor" class="button button-primary"> Conocer más <i class="fa fa-chevron-down"></i></a>
+                <a href="Curriculum.pdf" class="button button-secondary"> Descargar CV <i class="fa fa-file"></i> </a>
+                </div>
+            </div>
+
+        <div class="header-img">
+            <img src="images/header-img.svg">
+        </div>
+    </header>
+
+    
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- 
+            * Info
+         -->    
+        <div id="info-anchor">
+            <section id="info" data-aos="fade-up" class="info mt">
+                <div class="info-img">
+                    <div id="me-box">
+                        <img src="images/me.png">
+                    </div>
+                    <div id="bubble-box">
+                        <img src="images/bubble.png">
+                    </div>
+                </div>
+
+                <div class="info-text">
+                    <h1> Sobre mí </h1>
+                    <p> Desarrollador web con dos años de experiencia como trabajador indepentiente </p>
+                    
+                    <p> Amante de los diseños simples, minimalistas y funcionales. </p>
+
+                    <p> Si buscas llevar a cabo el siguiente nivel en tu emprendimiento ¡Estaré encantado de ayudarte! </p>
+                </div>
+            </section>
+        </div>
+
+        <!--
+            * Education
+        -->
+        <div id="education-anchor">
+            <section id="education" data-aos="fade-up" class="education mt-2">
+                <h1 class="cols-3"> Formación </h1>
+    
+                <div>
+                    <h3> U.E.N <br> "Meregoto" </h3>
+    
+                    <img src="images/formation-0.svg">
+    
+                    <h3> 2009 - 2015 </h3>
+                </div>
+    
+                <div>
+                    <h3> U.E.P <br> "Teresa Carreño" </h3>
+    
+                    <img src="images/formation-1.svg">
+    
+                    <h3> 2015 - 2020 </h3>
+                </div>
+    
+                <div>
+                    <h3> U.N.E <br> "Rómulo Gallegos" </h3>
+    
+                    <img src="images/formation-2.svg">
+    
+                    <h3> 2020 - Actualidad </h3>
+                </div>
+            </section>
+        </div>
+
+        <!--
+            * Skills
+        -->
+        <div id="skills-anchor">
+            <section id="skills" data-aos="fade-up" class="skills mt-2">
+                <h1> Conocimientos </h1>
+    
+                <div class="html">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+    
+                <div class="css">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+    
+                <div class="js">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+    
+                <div class="sass">
+                    <i class="fa-brands fa-sass"></i>
+                </div>
+
+                <div class="bootstrap">
+                    <i class="fa-brands fa-bootstrap"></i>
+                </div>
+    
+                <div class="node">
+                    <i class="fa-brands fa-node-js"></i>
+                </div>
+    
+                <div class="python">
+                    <i class="fa-brands fa-python"></i>
+                </div>  
+    
+                <div class="react">
+                    <i class="fa-brands fa-react"></i>
+                </div>
+    
+                <div class="git">
+                    <i class="fa-brands fa-git-alt"></i>
+                </div>
+                
+                <div class="db">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+            </section>
+        </div>
+
+        <!--
+            * Works
+        -->
+        <div id="works-anchor">
+            <section id="works" data-aos="fade-up" class="works mt-2">
+                <h1 class="cols-3"> Trabajos Destacados </h1>
+    
+                <div>
+                    <img src="images/img.svg">
+    
+                    <div class="works-links">
+                        <a href="#" class="p-button"> Proyecto </a>
+                        <a href="#" class="repo-button"> Repositorio <i class="fab fa-github"></i></a>
+                    </div> 
+                </div>
+    
+                <div>
+                    <img src="images/img.svg">
+    
+                    <div class="works-links">
+                        <a href="#" class="p-button"> Proyecto </a>
+                        <a href="#" class="repo-button"> Repositorio <i class="fab fa-github"></i></a>
+                    </div> 
+                </div>
+    
+                <div>
+                    <img src="images/img.svg">
+    
+                    <div class="works-links">
+                        <a href="#" class="p-button"> Proyecto </a>
+                        <a href="#" class="repo-button"> Repositorio <i class="fab fa-github"></i></a>
+                    </div> 
+                </div>
+    
+                <div>
+                    <img src="images/img-alt.svg">
+    
+                    <div class="works-links">
+                        <a href="#" class="p-button"> Proyecto </a>
+                        <a href="#" class="repo-button"> Repositorio <i class="fab fa-github"></i></a>
+                    </div> 
+                </div>
+    
+                <div>
+                    <img src="images/img-alt.svg">
+    
+                    <div class="works-links">
+                        <a href="#" class="p-button"> Proyecto </a>
+                        <a href="#" class="repo-button"> Repositorio <i class="fab fa-github"></i></a>
+                    </div> 
+                </div>
+    
+                <div>
+                    <img src="images/img-alt.svg">
+    
+                    <div class="works-links">
+                        <a href="#" class="p-button"> Proyecto </a>
+                        <a href="#" class="repo-button"> Repositorio <i class="fab fa-github"></i></a>
+                    </div> 
+                </div>
+            </section>
+        </div>
+
+    <!-- Close Container -->
+    </div>
+
+    <!--
+        * Footer
+        * Contact
+    -->
+    <footer id="contact" class="contact">
+        <div class="contact-img">
+            <img src="images/contact.svg" alt="">
+        </div>
+
+        <div class="contact-info">
+            <h3> dev.jorge2003@gmail.com </h3>
+
+            <div class="social-buttons">
+                <a href="#" class="social-button social-button--facebook" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-button social-button--linkedin" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                
+                <a href="https://github.com/LZJorge" class="social-button social-button--github" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+
+                <a href="#" class="social-button social-button--instagram" aria-label="CodePen">
+                  <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!--
+        * Scripts
+    -->
+
+        <!-- Font Awesome CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+
+        <!-- Animate On Scroll CDN -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- Personal JS -->
+        <script src="js/index.js"></script>
+
+</body>
+</html>

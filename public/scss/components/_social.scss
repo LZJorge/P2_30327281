@@ -1,0 +1,73 @@
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+} 
+
+.social-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: $social-button-size;
+    height: $social-button-size;
+    text-decoration: none;
+    border-radius: 100%;
+    background: $social-button-background;
+    text-align: center;
+  
+    &::after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 100%;
+        transition: $social-button-transition-time;
+    }
+  
+    &:focus,
+    &:hover {
+        color: $social-button-active-color;
+  
+        &::after {
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            margin-left: calc(-50% - 1px);
+        }
+    }
+  
+    i,
+    svg {
+        position: relative;
+        z-index: 1;
+        transition: $social-button-transition-time;
+    }
+  
+    i {
+        font-size: $social-button-size * $social-button-icon-size;
+    }
+  
+    svg {
+        height: percentage($social-button-icon-size);
+        width: percentage($social-button-icon-size);
+    }
+  
+    @each $name, $color in $social-button-colors {
+        &--#{$name} {
+            color: $color;
+  
+            &::after {
+                background: $color;
+            }
+        }
+    }
+}
+
+footer .social-button {
+    background-color: $black;
+}

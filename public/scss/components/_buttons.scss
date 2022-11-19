@@ -1,0 +1,69 @@
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 8px 24px;
+    border-radius: 4px;
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    transition: all .2s;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+
+    &:active {
+        background-color: $primary-active;
+    }
+}
+
+.button-secondary {
+    background-color: $secondary;
+    color: $white;
+
+    &:hover {
+        background-color: $secondary-hover;
+    }
+
+    &:active {
+        background-color: $secondary-active;
+    }
+}
+
+.button-bordered {
+    border: 1px solid $black;
+    padding: 6px 18px;
+
+    &:hover {
+        color: $white;
+        background-color: $primary-hover;
+        border: 1px solid $primary-hover;
+    }
+
+    &:active {
+        background-color: $primary-active;
+        border: 1px solid $primary-active;
+    }
+}
+
+#button-contact {
+    background-color: $secondary;
+
+    i {
+        font-size: 1rem;
+    }
+}
+
+.off {
+    cursor: not-allowed;
+}

@@ -1,0 +1,65 @@
+/*
+* Colors
+*/
+$black: #333;
+$white: #fff;
+$gray: #f4f4f4;
+$gray-2: #d0d0d0;
+
+$primary: #6A7BFF;
+$primary-hover: #4b5bd8;
+$primary-active: #3747bb;
+
+$secondary: #F07067;
+$secondary-hover: #e7564c;
+$secondary-active: #d34036;
+
+$bg-color: #f7f1e3;
+
+$danger: rgb(231, 57, 34);
+$warning: rgb(252, 255, 68);
+$success: rgb(15, 209, 80);
+
+$dark-bg: #13141f;
+
+/*
+* Values
+*/
+$border-radius: 12px;
+$box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+$drop-shadow: drop-shadow(8px 8px 25px rgba(51, 51, 51, 0.3));
+
+/*
+* Skills colors
+*/
+
+$skill-colors: (
+    'html': rgb(255, 72, 0),
+    'css': rgb(36, 96, 226),
+    'js': rgb(245, 207, 40),
+    'sass': rgb(212, 102, 198),
+    'bootstrap': rgb(116, 13, 201),
+    'node': rgb(40, 206, 40),
+    'python': rgb(3, 118, 185),
+    'react': rgb(0, 195, 255),
+    'git': rgb(245, 59, 52),
+    'db': rgb(148, 148, 255),
+);
+
+/*
+* Social Vars
+*/
+
+$social-button-size: 48px;
+$social-button-icon-size: 0.4;
+$social-button-background: #fff;
+$social-button-active-color: #fff;
+$social-button-transition-time: 0.3s;
+  
+$social-button-colors: (
+    'facebook': #3b5999,
+    'linkedin': #0077b5,
+    'github': #5a3b88,
+    'instagram': #e4405f,
+);

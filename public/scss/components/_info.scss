@@ -1,0 +1,47 @@
+.info {
+    width: 100%;
+    @include grid(1fr 1fr, auto, 0, 20px, 20px);
+    background-color: $gray;
+    border-radius: $border-radius;
+    padding: 150px 0;    
+
+    .info-img {
+        position: relative;
+    
+        img {
+            @include position-center;
+        }
+    }
+
+    .info-text {
+        box-sizing: border-box;
+        padding-right: 40px;
+
+        p {
+            margin-top: 25px;
+        }
+    }
+}
+
+#me-box {
+    z-index: 50;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    @include position-center;
+
+    img {
+        width: 50%;
+    }
+}
+
+#bubble-box {
+    z-index: 10;
+
+    img {
+        width: 100%;
+        filter: $drop-shadow;
+    }
+}
