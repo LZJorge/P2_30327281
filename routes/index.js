@@ -20,12 +20,21 @@ router.post('/', (req, res) => {
     let message = req.body.message;
     let today = date.toLocaleString();
 
-    const ipAddress = req.socket.remoteAddress;
+    let ipAddress = req.socket.remoteAddress;
 
-    db.run(`INSERT INTO users(name, [email], message, address, date) VALUES ('${name}', '${email}', '${message}', '${ipAddress}', '${today}')`);
+    db.run(`INSERT INTO users(name, email, message, address, date) VALUES ('${name}', '${email}', '${message}', '${ipAddress}', '${today}')`);
     req.flash('successMessage', 'Comentario enviado satisfactoriamente');
     
     res.redirect('/');
+})
+
+// TEST THE DB INFO JUST FOR SEE IT IS WORKING ON TASK 2
+router.get('/test-the-database-info-30327281', (req, res)=> {
+    db.all('SELECT * FROM users', [], (err, rows) => {
+        if (err) throw err;
+        
+        res.send(rows)
+    })
 })
 
 module.exports = router;

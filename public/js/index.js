@@ -35,8 +35,7 @@ typingAnimation()
 * Banner
 */
 const close = document.querySelector(".close");
-close.addEventListener("click", handleOnClickClose);
-
-function handleOnClickClose(e) {
-    e.target.parentNode.classList.add("hide");
-}
+const banner = document.querySelector(".banner");
+close.addEventListener("click", ()=> {
+    banner.classList.add('hide');
+});
