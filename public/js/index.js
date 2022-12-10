@@ -1,8 +1,11 @@
-AOS.init({
+/* AOS.init({
     duration: 1300,
     once: true
-});
+}); */
 
+/* 
+* Typing animation
+*/
 const typing = document.getElementById('typing')
 
 let text = "<Desarrollador web>"
@@ -27,3 +30,13 @@ const clear = () => {
 }
 
 typingAnimation()
+
+/* -------------
+* Banner
+*/
+const close = document.querySelector(".close");
+close.addEventListener("click", handleOnClickClose);
+
+function handleOnClickClose(e) {
+    e.target.parentNode.classList.add("hide");
+}

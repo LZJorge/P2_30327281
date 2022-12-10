@@ -1,17 +1,11 @@
 .contact {
-    @include grid(40% 60%, 300px, 0, 15px, 15px);
-    background-color: #434343;
+    @include grid(60% 40%, auto, 0, 15px, 15px);
+    background-color: #444;
+
+    padding: 35px 0;
 
     * {
         color: $white;
-    }
-
-    .contact-img {
-        position: relative;
-
-        img {
-            width: 115%;
-        }
     }
 
     .contact-info {

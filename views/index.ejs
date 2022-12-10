@@ -261,11 +261,28 @@
         * Contact
     -->
     <footer id="contact" class="contact">
-        <div class="contact-img">
-            <img src="images/contact.svg" alt="">
-        </div>
+        <form action="/" method="post" class="contField contact-form">
+            <div class="box">
+                <input required class="input" type="text" name="fullname" id="fullname" placeholder="Fullname">
+                <label for="fullname"> Nombre </label>
+            </div>
+            <div class="box">
+                <input required class="input" type="email" name="email" id="email" placeholder="Email">
+                <label for="email"> Correo electrónico </label>
+            </div>
+            <div class="box">
+                <textarea required class="input" type="text" name="message" id="message" placeholder="Description"></textarea>
+                <label for="message"> Tu comentario </label>
+            </div>
 
+            <button id="form-submit" name="send" value="send" type="submit" class="butt-focus">
+                Enviar comentario 
+                <i class='fa fa-chevron-right'></i>
+            </button>
+        </form>
+            
         <div class="contact-info">
+            <h2> ¡Contáctame! </h2>
             <h3> dev.jorge2003@gmail.com </h3>
 
             <div class="social-buttons">
@@ -288,17 +305,30 @@
     </footer>
 
     <!--
+        * BANNER
+    -->
+
+    <% if (successMessage) { %>
+        <div class="banner">
+            <div>
+                <p> <%= successMessage %> </p>
+            </div>
+            <button id="closeBanner" class="close"><i class='fa fa-x'></i></button>
+        </div>
+    <% } %>
+
+    <!--
         * Scripts
     -->
 
-        <!-- Font Awesome CDN -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+    <!-- Font Awesome CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
 
-        <!-- Animate On Scroll CDN -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Animate On Scroll CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        <!-- Personal JS -->
-        <script src="js/index.js"></script>
+    <!-- Personal JS -->
+    <script src="js/index.js"></script>
 
 </body>
 </html>
