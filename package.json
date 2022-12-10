@@ -15,7 +15,6 @@
     "express-session": "^1.17.3",
     "morgan": "~1.9.1",
     "req-flash": "^0.0.3",
-    "sequelize": "^6.26.0",
     "sqlite3": "^5.1.2"
   },
   "devDependencies": {
