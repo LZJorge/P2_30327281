@@ -23,7 +23,6 @@ router.post('/', (req, res) => {
     let ipAddress = req.socket.remoteAddress;
 
     db.run(`INSERT INTO users(name, email, message, address, date) VALUES ('${name}', '${email}', '${message}', '${ipAddress}', '${today}')`);
-    req.flash('successMessage', 'Comentario enviado satisfactoriamente');
     
     res.redirect('/');
 })

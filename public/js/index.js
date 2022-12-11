@@ -33,9 +33,18 @@ typingAnimation()
 
 /* -------------
 * Banner
-*/
+
+----------------
+const formSubmit = document.querySelector('contact-form');
+
 const close = document.querySelector(".close");
 const banner = document.querySelector(".banner");
+
+formSubmit.addEventListener('submit', (event)=> {
+    event.preventDefault();
+    banner.classList.remove('hide');
+})
+
 close.addEventListener("click", ()=> {
     banner.classList.add('hide');
-});
+}); */
