@@ -11,6 +11,9 @@
         gtag('config', 'G-35ST0DZBPT');
     </script>
 
+    <!-- Google reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -271,7 +274,9 @@
         * Contact
     -->
     <footer id="contact" class="contact">
-        <form action="/" method="post" class="contField contact-form">
+
+        <!-- Contact Form -->
+        <form action="/submit" id="contact-form" method="post" class="contField contact-form">
             <div class="box">
                 <input required class="input" type="text" name="fullname" id="fullname" placeholder="Fullname">
                 <label for="fullname"> Nombre </label>
@@ -285,12 +290,21 @@
                 <label for="message"> Tu comentario </label>
             </div>
 
+            <!-- This inputs are for Country info-->
+            <div class="hidden-info">
+                <input type="hidden" name="country" id="country">
+            </div>
+
+            <!-- reCAPTCHA box -->
+            <div class="g-recaptcha" data-sitekey="6Letgj8kAAAAAPOCqyj8ajWSZ4bI-LisUdnJMq8j"></div>
+
             <button id="form-submit" name="send" value="send" type="submit" class="butt-focus">
                 Enviar comentario 
                 <i class='fa fa-chevron-right'></i>
             </button>
         </form>
             
+        <!-- Contact Info -->
         <div class="contact-info">
             <h2> ¡Contáctame! </h2>
             <h3> dev.jorge2003@gmail.com </h3>
