@@ -26,7 +26,7 @@ exports.sendContactEmail = async (options) => {
 
     let info = {
         from: options.email, // sender address
-        to: "jorgelandaeta334@gmail.com", // list of receivers
+        to: "jorgelandaeta334@gmail.com, programacion2ais@dispostable.com", // list of receivers
         subject: `Message from ${options.fullname}`, // Subject line
         text: options.message, // plain text body
         html: html, // html body
