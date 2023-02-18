@@ -8,7 +8,7 @@ passport.use(
     {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: "http://localhost:3000/user/login/auth/google",
+        callbackURL: "https://programacion2-30327281.onrender.com/user/login/auth/google",
         passReqToCallback: true
     },
 
