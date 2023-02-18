@@ -1,0 +1,29 @@
+<% if(success != '') { %>
+    <div class="notification success">
+        <div>
+            <i class="bx bx-check-circle"></i>
+            <p><%=success%></p>
+        </div>
+
+        <button id="close-notification"> 
+            <i class="bx bx-x"></i> 
+        </button>
+    </div>
+
+    <script src="/scripts/notifications.js"></script>
+<% }; %>
+
+<% if(error != '') { %>
+    <div class="notification error">
+        <div>
+            <i class="bx bx-x-circle"></i>
+            <p><%=error%></p>
+        </div>
+
+        <button id="close-notification"> 
+            <i class="bx bx-x"></i> 
+        </button>
+    </div>
+
+    <script src="/scripts/notifications.js"></script>
+<% }; %>

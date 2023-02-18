@@ -7,17 +7,25 @@
     "dev": "nodemon --exec npm run start"
   },
   "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.20.1",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "html-to-text": "^9.0.3",
     "juice": "^8.1.0",
     "morgan": "~1.9.1",
+    "node-fetch": "^2.6.9",
     "nodemailer": "^6.9.1",
+    "passport": "^0.6.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-local": "^1.0.0",
     "request": "^2.88.2",
+    "sequelize": "^6.28.0",
     "sqlite3": "^5.1.2"
   },
   "devDependencies": {

@@ -1,43 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Source+Code+Pro&display=swap');
-
 * {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
-    overflow-x: hidden;
+    background-color: $bg-color;
 }
 
-h1, h2, h3, h4, a, i, p {
+h1, h2, h3, h4, h5, h6, a, p {
     color: $black;
 }
 
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-h4 {
-    font-size: 1.2rem;
-}
-
-h5 {
-    font-size: 0.9rem;
-}
-
 a {
-    font-size: 1rem;
     text-decoration: none;
 }
 
@@ -49,46 +25,6 @@ ul {
     color: $primary;
 }
 
-.container {
-    width: 90vw;
-    margin: 0 auto;
-}
-
-.name {
-    font-size: 3rem;
-}
-
-.mt {
-    margin-bottom: 100px;
-}
-
-.mt-2 {
-    margin-bottom: 150px;
-}
-
-.cols-3 {
-    grid-column: span 3;
-}
-
-#info-anchor,
-#education-anchor,
-#skills-anchor,
-#works-anchor {
-    padding: 75px 0;
-}
-
-@mixin grid($cols, $rows: auto, $gap: 0, $padding-y: 0, $padding-x: 0) {
-    display: grid;
-    grid-template-columns: $cols;
-    grid-template-rows: $rows;
-    gap: $gap;
-
-    padding: $padding-y $padding-x;
-}
-
-@mixin position-center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+* {
+    scroll-behavior: smooth;
 }

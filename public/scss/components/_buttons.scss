@@ -1,20 +1,66 @@
 .button {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    padding: 8px 24px;
-    border-radius: 4px;
+    text-decoration: none !important;
+    color: $black;
+    padding: 8px 14px;
+    font-size: 14px;
 
-    background-color: transparent;
-    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border: none;
-
-    transition: all .2s;
-    font-size: 1rem;
+    outline: none;
+    border-radius: $button-radius;
     cursor: pointer;
+    transition: $transition;
 }
 
-.button-primary {
+.reg-button {
+    width: 120px;
+    height: 40px;
+    font-weight: 500;
+    border: 1px solid $black;
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+        border-color: $primary;
+    }
+
+    &:active {
+        background-color: $primary-hover;
+        border-color: $primary-hover;
+    }
+}
+
+.cv-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 40px;
+    color: $white;
+    background-color: $primary;
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+
+    &:active {
+        background-color: $primary-active;
+    }
+}
+
+button.submit-button {
+    border-radius: 4px;
+    height: 45px;
+    padding: 12px;
+    width: 260px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto;
+    transition: $transition;
     background-color: $primary;
     color: $white;
 
@@ -27,43 +73,66 @@
     }
 }
 
-.button-secondary {
-    background-color: $secondary;
-    color: $white;
+button#side-menu-button {
+    width: 35px;
+    height: 35px;
 
-    &:hover {
-        background-color: $secondary-hover;
-    }
-
-    &:active {
-        background-color: $secondary-active;
-    }
-}
-
-.button-bordered {
-    border: 1px solid $black;
-    padding: 6px 18px;
-
-    &:hover {
-        color: $white;
-        background-color: $primary-hover;
-        border: 1px solid $primary-hover;
-    }
-
-    &:active {
-        background-color: $primary-active;
-        border: 1px solid $primary-active;
-    }
-}
-
-#button-contact {
-    background-color: $secondary;
+    cursor: pointer;
+    @include flex-column-center;
 
     i {
-        font-size: 1rem;
+        font-size: 24px;
     }
 }
 
-.off {
-    cursor: not-allowed;
+.google-btn {
+    text-decoration: none !important;
+    width: 214px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: $google-blue;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    transition: $transition;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+    
+    .google-icon-wrapper {
+        min-width: 38px;
+        width: 38px;
+        height: 38px;
+        border-radius: 2px;
+        background-color: $white;
+        @include flex-column-center;
+        align-items: center;
+    }
+
+    .google-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .google-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn-text {
+            text-decoration: none;
+            color: $white;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+        }
+    }
+
+    &:hover {
+      box-shadow: 0 0 6px $google-blue;
+    }
+
+    &:active {
+      background: $button-active-blue;
+    }
 }

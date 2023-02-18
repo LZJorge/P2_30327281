@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include ('partials/head') %>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ==== CSS ==== -->
+    <link rel="stylesheet" href="/css/register.min.css">
+
+    <!-- ==== Boxicons ==== -->
+    <link rel="stylesheet" href="/icons/css/boxicons.min.css">
+
+    <title> <%= title %> </title>
+
+</head>
+<body>
+
+    <!-- 
+        * INFO Messages
+    -->
+    <%- include('partials/notifications') %>
+
+    <form action="/user/login/auth" method="POST" class="users-form">
+
+        <div>
+            <p class="title"> Iniciar sesión </p>
+
+            <div class="form-input-box">
+                <span>
+                    <i class="bx bx-at"></i>
+                </span>
+                <input required name="email" type="email"placeholder="Correo electrónico" />
+            </div>
+
+            <div class="form-input-box">
+                <span>
+                    <i class="bx bxs-lock"></i>
+                </span>
+                <input required name="password" type="password" placeholder="Contraseña" />
+            </div>
+            
+            <button class="submit-button loader"> Enviar </button>
+            <a href="/">Volver al inicio</a>
+            
+            <p class="text">¿No tienes una cuenta?</p>
+            <a href="/user/register" class="button buttonShadow">Regístrate</a>
+
+            <a href="/user/login/auth/google" class="google-btn">
+                <div class="google-icon-wrapper">
+                  <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                </div>
+                <div class="google-text">
+                    <p class="btn-text">Sign in with google</p>
+                </div>
+            </a>
+        </div>
+
+    </form>
+
+</body>
+</html>

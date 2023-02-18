@@ -1,0 +1,27 @@
+.services {
+    width: 100%;
+    background-color: $white;
+    padding: $new-section-white;
+    @include grid( 1fr 1fr, 100vh);
+
+    .services-content {
+        height: 82%;
+        margin: auto 0;
+        @include grid(1fr 1fr, 50% 50%);
+        gap: 20px;
+
+        div {
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+            background-color: darken($bg-color, 4);
+        }
+
+        div:nth-of-type(1) { border-top-left-radius: 20px; }
+        div:nth-of-type(2) { border-top-right-radius: 20px; }
+        div:nth-of-type(3) { border-bottom-left-radius: 20px; }
+        div:nth-of-type(4) { border-bottom-right-radius: 20px; }
+    }
+
+    .services-img {
+        position: relative;
+    }
+}

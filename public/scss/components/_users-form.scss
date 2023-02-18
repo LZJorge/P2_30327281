@@ -1,0 +1,55 @@
+.users-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .title {
+        color: rgb(30, 30, 30);
+        font-size: 18px;
+        font-weight: bold;
+        margin: 20px auto;
+    }
+
+    .buttonShadow {
+        width: 100%;
+        margin: 10px auto 0;
+        background-color: #fff;
+        color: $black;
+        font-size: 14px;
+        border: 1px solid rgb(50, 50, 50, 0.3);
+
+        &:hover {
+            background-color: rgb(60, 60, 60, 0.2);
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        color: rgb(90, 90, 90);
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .text {
+        font-size: 15px;
+        margin: 15px auto 0;
+        color: rgb(20, 20, 20);
+    }
+}
+
+.users-form > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+}

@@ -1,0 +1,107 @@
+.input-box {
+    width: 90%;
+    margin: 30px 0;
+    position: relative;
+   
+    input[type="text"] {
+        height: 50px;
+        width: 100%;
+        outline: 1px solid rgb(0, 0, 0, 0.1);
+        border: none;
+        padding: 0 130px 0 25px;
+        border-radius: 25px;
+        box-shadow: 4px 4px 20px 1px rgb(0, 0, 0, 0.1),
+                        4px -4px 20px 1px rgb(0, 0, 0, 0.1),
+                        -4px -4px 20px 1px rgb(0, 0, 0, 0.1),
+                        -4px 4px 20px 1px rgb(0, 0, 0, 0.1);
+        transition: $transition;
+
+        &:focus {
+            outline: 1px solid rgba(18, 81, 197, .5);
+            box-shadow: 4px 4px 20px 1px rgba(18, 81, 197, 0.1),
+                        4px -4px 20px 1px rgba(18, 81, 197, 0.1),
+                        -4px -4px 20px 1px rgba(18, 81, 197, 0.1),
+                        -4px 4px 20px 1px rgba(18, 81, 197, 0.1);
+        }
+    }
+
+    button.submit {
+        box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.1);
+        outline: none;
+        border: none;
+        background-color: $primary;
+        color: $white;
+        cursor: pointer;
+
+        position: absolute;
+        right: -1px;
+
+        height: 50px;
+        width: 120px;
+        border-radius: 25px;
+        transition: $transition;
+
+        &:hover {
+            background-color: $primary-hover;
+        }
+
+        &:active {
+            background-color: $primary-active;
+        }
+    }
+}
+
+.form-input-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+
+    span {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin: 10px auto;
+        padding: 10px 10px 10px 40px;
+        background-color: rgb(240, 240, 240);
+        outline: none;
+        border: 1px solid rgb(0, 0, 0, .1);
+        font-size: 15px;
+        color: $black;
+        transition: $transition;
+
+        &::placeholder {
+            color: rgb(49, 49, 49);
+        }
+
+        &:hover {
+            background-color: #F1EFF1;
+        }
+
+        &:focus {
+            background-color: #fff;
+            border: 1px solid rgb(87, 126, 219);
+            box-shadow: 0 0 4px 2px rgb(50, 50, 50, .1);
+        }
+
+        &:valid {
+            border: 1px solid rgb(140, 140, 140);
+        }
+    }
+
+    textarea {
+        height: 140px;
+        resize: none;
+    }
+}

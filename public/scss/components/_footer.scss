@@ -1,0 +1,124 @@
+.footer {
+    padding: 40px 0 0;
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    font-size: 1em;
+
+    .cont {
+        margin: auto;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 30px;
+        color: rgb(255, 255, 255, 1);
+
+        .social-media {
+            gap: 15px;
+            width: fit-content;
+            margin-top: 10px;
+
+            a {
+                cursor: pointer;
+            }
+        }
+        
+    }
+
+    .row > div {
+        width: 25%;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        flex-grow: 1;
+    }
+
+    .row > div:nth-child(2) {
+        width: 10%;
+    }
+
+    p {
+        margin: 20px 0;
+        color: rgb(255, 255, 255, 0.8);
+        font-size: 0.9em;
+        line-height: 1.8em;
+    }
+
+    h4 {
+        background-color: rgb(118, 109, 244, 0.2);
+        color: rgb(118, 109, 244, 1);
+        width: fit-content;
+        border-radius: 7px;
+        padding: 5px 10px;
+        font-weight: 600;
+    }
+
+    ul,
+    li {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 10px 0;
+        transition: 0.3s;
+        overflow: hidden;
+    }
+
+    ul a {
+        text-decoration: none;
+        color: rgb(255, 255, 255, 0.8);
+        margin-left: 15px;
+    }
+
+    li {
+        transform: translateX(-15px);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-left: 8px solid rgb(118, 109, 244);
+            border-bottom: 5px solid transparent;
+        }
+
+        &:hover {
+            transform: translateX(0);
+        }
+    }
+
+    .copyright {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        height: 80px;
+        background-color: rgb(10, 10, 10);
+        color: rgb(255, 255, 255, 0.7);
+        font-size: 0.8em;
+    }
+}
+
+/**
+ * Responsive
+ */
+@media screen and (max-width: $responsive-max-width-medium) {
+    .footer {
+        .row {
+            flex-direction: column;
+        }
+
+        .row > div {
+            width: 100%;
+        }
+
+        .row > div:nth-child(2) {
+            width: 100%;
+        }
+    }
+}

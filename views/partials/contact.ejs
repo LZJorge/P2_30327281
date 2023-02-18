@@ -1,0 +1,39 @@
+<form action="/submit" method="POST" class="contact-form" id="anchor-contact">
+
+    <h1> ¡Contáctame! </h1>
+
+    <div class="form-input-box">
+        <span>
+            <i class="bx bxs-user"></i>
+        </span>
+        <input required name="name" type="text" placeholder="Nombre completo" />
+    </div>
+
+    <div class="form-input-box">
+        <span>
+            <i class="bx bx-at"></i>
+        </span>
+        <input required name="email" type="email"placeholder="Correo electrónico" />
+    </div>
+
+    <div class="form-input-box">
+        <span>
+            <i class="bx bxs-envelope"></i>
+        </span>
+        <textarea required name="message" placeholder="Tu comentario"></textarea>
+    </div>
+
+    <input type="hidden" id="ip" name="ip">
+    <input type="hidden" id="country" name="country">
+
+    <!-- reCAPTCHA box -->
+    <div class="g-recaptcha" data-sitekey="6Letgj8kAAAAAPOCqyj8ajWSZ4bI-LisUdnJMq8j"></div>
+
+    <button class="submit-button"> Enviar </button> 
+</form>
+
+<div class="contact-img">
+    <div class="img-placeholder img-placeholder-3"></div>
+</div>
+
+<script src="/scripts/form.js"></script>

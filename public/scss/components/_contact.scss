@@ -1,17 +1,41 @@
 .contact {
-    @include grid(60% 40%, auto, 0, 15px, 15px);
-    background-color: #444;
+    width: 100%;
+    padding: $new-section-white;
+    @include grid( 1fr 1fr, 100vh);
 
-    padding: 35px 0;
-
-    * {
-        color: $white;
-    }
-
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+    .contact-form {
+        background-color: $white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+        height: 90%;
+        width: 100%;
+        margin: auto;
+        @include flex-column-center;
         align-items: center;
     }
+
+    .contact-img {
+        width: 100%;
+        position: relative;
+    }
 }
+
+/**
+ * Responsive
+ */
+ @media screen and (max-width: $responsive-max-width-medium) {
+    .contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh 80vh;
+
+        .contact-form {
+            align-items: center;
+
+            .form-input-box {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+ }

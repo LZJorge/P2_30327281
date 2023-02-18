@@ -1,69 +1,46 @@
 header {
-    width: 100%;
-    height: calc(100vh - 60px);
-    @include grid(1fr 1fr, auto, 30px, 0, 50px);
+    width: 90%;
+    margin: 0 auto;
+    @include grid( 1fr 1fr, calc(100vh - 50px) );
 
-    .header-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        text-align: right;
+    .header-content {
+        height: 90%;
+        @include flex-column-center;
+        align-items: center;
 
-        div {
-            margin: 20px;
-        }
-
-        #typing {
-            border-right: 3px solid $black;
-            animation: typing infinite 1s;
-        }
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+        }        
     }
 
     .header-img {
         position: relative;
-    
-        img {
-            @include position-center;
-            width: 100%;
+        width: 100%;
+    }
+}
 
-            padding: 20px 0 40px 0;
-            border-radius: 12px;
+/**
+ * Responsive
+ */
+@media screen and (max-width: $responsive-max-width-medium) {
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 90vh;
 
-            filter: $drop-shadow;
+        .header-content {
+            height: 100%;
+            margin: 50px auto;
+        }
+
+        .header-img {
+            height: 100%;
         }
     }
 }
 
-#typing {
-    display: inline-block;
-
-    &::after {
-        display: block;
-        content: attr(data-text);
-        height: 0;
-        visibility: hidden;
-        overflow: hidden;
-        user-select: none;
-        pointer-events: none;
-        font-weight: bolder;
-    
-        @media speech {
-          display: none;
-        }
-    }
-}
-
-@keyframes typing {
-    0% {
-        border-right: 3px solid $black;
-    }
-
-    50% {
-        border-right: 3px solid transparent;
-    }
-
-    100% {
-        border-right: 3px solid $black;
+@media screen and (max-width: $responsive-max-width-tiny) {
+    header {
+        grid-template-rows: auto 70vh;
     }
 }

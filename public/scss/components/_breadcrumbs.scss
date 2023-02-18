@@ -1,0 +1,179 @@
+@use "sass:map";
+
+.social-media {
+    display: flex;
+    align-items: center;
+
+    a {
+        margin: 20px;
+        color: $white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 50;
+        cursor: pointer;
+
+        i {
+            font-size: 20px;
+        }
+
+        &::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-color: $black;
+            border-radius: 50%;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -10;
+            transition: $transition;
+        }
+    }
+
+    @each $name, $color in $social-button-colors {
+        a.social-button--#{$name}:hover::before {
+            background-color: $color;
+        }
+    }
+}
+
+.techs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $section-m 8% $section-m 8%;
+
+    i {
+        font-size: 48px;
+        color: $black;
+        transition: $transition;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.img-placeholder {
+    width: 80%;
+    height: 85%;
+    background-color: $primary;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: $box-shadow-img;
+
+    border-radius: $img-radius $img-radius 20px $img-radius;
+}
+
+.img-placeholder-2 {
+    border-radius: $img-radius 20px $img-radius $img-radius;
+}
+
+.img-placeholder-3 {
+    border-radius: 20px $img-radius 20px 20px;
+}
+
+.notification {
+    width: 95%;
+    height: 40px;
+
+    position: fixed;
+    left: 2.5%;
+    bottom: 15px;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+    transition: all .4s;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 50px);
+
+        i {
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        p, i {
+            color: #222;
+        }
+    }
+
+    #close-notification {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        margin: auto;
+        border: none;
+        outline: none;
+
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: $transition;
+
+        i {
+            font-size: 24px;
+            color: $white;
+        }
+    }
+}
+
+.success {
+    background-color: map.get($success-colors, 'success');
+
+    #close-notification {
+        background-color: map.get($success-colors, 'hover');
+
+        &:hover {
+            background-color: map.get($success-colors, 'active');
+        }
+    }
+}
+
+.error {
+    background-color: map.get($danger-colors, 'danger');
+
+    #close-notification {
+        background-color: map.get($danger-colors, 'hover');
+
+        &:hover {
+            background-color: map.get($danger-colors, 'active');
+        }
+    }
+}
+
+
+/**
+ * Responsive
+ */
+@media screen and (max-width: $responsive-max-width-medium) {
+    .techs {
+        i {
+            font-size: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: $responsive-max-width-tiny) {
+    .techs {
+        i {
+            font-size: 24px;
+        }
+    }
+}
